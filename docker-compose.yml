@@ -1,0 +1,13 @@
+version: '3'
+services:
+  goapp:
+    container_name: simplegoapp
+    image: gobuildwebhookgithub
+    build:
+      context: .
+    ports:
+      - "1516:4000"
+    networks:
+      - netgo
+networks:
+  netgo:
